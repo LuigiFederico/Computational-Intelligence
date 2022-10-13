@@ -1,9 +1,10 @@
 [tool.poetry]
-name = "lab1"
+name = "computational-intelligence"
 version = "0.1.0"
 description = ""
 authors = ["Luigi Federico <luigi.fede.22@gmail.com>"]
 readme = "README.md"
+packages = [{include = "computational_intelligence"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
