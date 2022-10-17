@@ -54,7 +54,7 @@ To do this, I scaled the weight and the number of new digits obtained adding *l*
 ## __Results__
 
 Running the algorithm with different values of N we obtain the following results.
-> Of course they depend on the generated list set, but they should be similar to the peer rewiever results)
+> Of course they depend on the generated list set, but they should be similar to the peer rewiever results
 
 ### __N = 5__
 Solution found:
