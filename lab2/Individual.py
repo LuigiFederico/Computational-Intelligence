@@ -1,7 +1,7 @@
 from collections import namedtuple
 from Genome import Genome
 
-Cost = namedtuple("Cost", ["n_vals", "healty" ,"length"])
+Cost = namedtuple("Cost", ["n_vals","length"])
 
 class Individual:
   """
@@ -12,11 +12,13 @@ class Individual:
     - n_vals: Number of distinct values covered (the higher, the better; max equal to N)
     - lenght: Total length of the genome (sum of lenghts of the genes)
   """
-  def __init__(self, genome):
+  def __init__(self, genome: Genome):
     self.genome = genome    # list of genes
     self.covered = genome.covered_values() # set
-    self.fitness = Cost(len(genome.covered), -len(genome))
-    
+    self.fitness = Cost(len(self.covered), -len(genome))
+
+  def __len__(self):
+    return len(self.genome)    
 
   def is_healty(self, N):
     """
@@ -25,5 +27,17 @@ class Individual:
     """
     return len(self.covered) == N
 
+  
   def fight(self, opponent):
-    return max(self.fitness, opponent.fitness)
+    if self.fitness > opponent.fitness:
+      return self
+    else:
+      return opponent
+  
+
+  def reproduce(self, partner, id_to_genes: dict):
+    return Individual(self.genome.cross_over(partner.genome, id_to_genes))
+
+  
+  def mutate(self, id_to_genes):
+    return Individual(self.genome.mutate(id_to_genes))

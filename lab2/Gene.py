@@ -3,8 +3,7 @@ def create_dict_genes(problem):
   id = 0
 
   for l in problem:
-    g = Gene(id, l)
-    id_to_genes[id] = g
+    id_to_genes[id] = Gene(id, l)
     id += 1
   
   return id_to_genes
@@ -18,5 +17,8 @@ class Gene:
 
   def __len__(self):
     return len(self.values)
+
+  def __str__(self):
+    return f'{self.values}'
     
 
