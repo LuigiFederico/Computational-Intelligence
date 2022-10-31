@@ -42,6 +42,23 @@ class Genome:
 
     return Genome([id_to_genes[g_id] for g_id in survivals])
   
+  def smart_reproduction(self, partner_genome, id_to_genes: dict, N):
+    # filter the duplicates ids -> exstract the candidate genes
+    candidates = [id_to_genes[id_] for id_ in set([g.id for g in self.genome + partner_genome.genome])]
+
+    stop = max(N, len(candidates))
+    goal = set(range(N))
+    covered = set()
+    new_genome = list()
+
+    for i in range(stop):
+      best = max(candidates, key=lambda gene: len(goal) - len(covered | gene.values)) # max based on how much the gene would contribute to the solution
+      new_genome.append(best)
+      candidates.remove(best)
+      if not candidates:
+        break
+    return Genome(new_genome)
+
 
   def mutate(self, id_to_genes: dict):
     genome = deepcopy(self.genome)
