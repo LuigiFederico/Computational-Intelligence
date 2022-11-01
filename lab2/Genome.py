@@ -52,7 +52,7 @@ class Genome:
     new_genome = list()
 
     for i in range(stop):
-      best = max(candidates, key=lambda gene: len(goal) - len(covered | gene.values)) # max based on how much the gene would contribute to the solution
+      best = max(candidates, key=lambda gene: (len(goal) - len(covered | gene.values), -len(gene))) # max based on how much the gene would contribute to the solution
       new_genome.append(best)
       candidates.remove(best)
       if not candidates:
@@ -68,4 +68,7 @@ class Genome:
     genome[point] = id_to_genes[random.choice([c for c in candidates])] # Update the genome
     return Genome(genome)
 
-    
+  
+  def display(self):
+    for gene in self.genome:
+      gene.display()

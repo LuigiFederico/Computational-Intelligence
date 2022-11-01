@@ -20,5 +20,7 @@ class Gene:
 
   def __str__(self):
     return f'{self.values}'
-    
+  
+  def display(self):
+    print(f"{sorted(self.values)}")
 
