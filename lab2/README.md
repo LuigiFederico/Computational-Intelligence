@@ -66,7 +66,7 @@ Winner individual:
 
 - Success = 100.0%
 - Genome Length = 5
-- Length - Idael_Length = 0
+- Length - Ideal_Length = 0
 - Cost of best individual per generation:
 ![Best individuals per generation](./plots/best_gen_5.png)
 
@@ -88,7 +88,7 @@ Winner individual:
 
 - Success = 100.0%
 - Genome Length = 13
-- Length - Idael_Length = 3
+- Length - Ideal_Length = 3
 - Cost of best individual per generation:
 ![Best individuals per generation](./plots/best_gen_10.png)
 
@@ -110,7 +110,7 @@ Winner individual:
 
 - Success = 100.0%
 - Genome Length = 29
-- Length - Idael_Length = 9
+- Length - Ideal_Length = 9
 
 - Cost of best individual per generation:
 ![Best individuals per generation](./plots/best_gen_20.png)
@@ -141,7 +141,7 @@ Winner individual:
 
 - Success = 100.0%
 - Genome Length = 261
-- Length - Idael_Length = 161
+- Length - Ideal_Length = 161
 
 - Cost of best individual per generation:
 ![Best individuals per generation](./plots/best_gen_100.png)
@@ -183,7 +183,7 @@ Winner individual:
 
 - Success = 100.0%
 - Genome Length = 11757
-- Length - Idael_Length = 11257
+- Length - Ideal_Length = 11257
 - Cost of best individual per generation:
 ![Best individuals per generation](./plots/best_gen_500.png)
 
@@ -224,7 +224,7 @@ Winner individual:
 
 - Success = 100.0%
 - Genome Length = 24505
-- Length - Idael_Length = 23505
+- Length - Ideal_Length = 23505
 - Cost of best individual per generation:
 ![Best individuals per generation](./plots/best_gen_1000.png)
 
