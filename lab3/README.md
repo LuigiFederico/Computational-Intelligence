@@ -1,11 +1,10 @@
-
-# Lab3 - Nim
+# Lab 3: Policy Search
 
 ## Task
 
 Write agents able to play [*Nim*](https://en.wikipedia.org/wiki/Nim), with an arbitrary number of rows and an upper bound $k$ on the number of objects that can be removed in a turn (a.k.a., *subtraction game*).
 
-The goal of the game is to **avoid** taking the last object.
+The player **taking the last object wins**.
 
 * Task3.1: An agent using fixed rules based on *nim-sum* (i.e., an *expert system*)
 * Task3.2: An agent using evolved rules
@@ -22,5 +21,7 @@ The goal of the game is to **avoid** taking the last object.
 * Working in group is not only allowed, but recommended (see: [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu_philosophy) and [Cooperative Learning](https://files.eric.ed.gov/fulltext/EJ1096789.pdf)). Collaborations must be explicitly declared in the `README.md`.
 * [Yanking](https://www.emacswiki.org/emacs/KillingAndYanking) from the internet is allowed, but sources must be explicitly declared in the `README.md`.
 
----
+**Deadline**
 
+* Tasks 3.1 and 3.2 -->  4/12  
+* Tasks 3.3 and 3.4 --> 11/12  
