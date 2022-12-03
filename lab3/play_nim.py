@@ -119,6 +119,16 @@ def expert_action(nim: Nim):
   return random_action(nim)
   
 
+opponents = {
+  1: dumb_action,
+  2: dumb_random_action,
+  3: random_action,
+  4: layered_action,
+  5: demigod_action,
+  6: expert_action
+}
+
+
 
 ####################
 ##  PLAY MATCHES  ##
@@ -165,6 +175,7 @@ def evaluate(nim: Nim, n_matches=20, *, my_action, opponent_action=random_action
     while not sum(nim_tmp._rows) == 0:
       player = 1 - player
       ply = player_action[player](nim_tmp)
+      logging.debug(f'Action P{player} = {ply}')
       nim_tmp.nimming(ply)
       logging.debug(f'player {player} -> {nim_tmp}\tnim_sum = {nim_sum(nim_tmp._rows)}')
 
