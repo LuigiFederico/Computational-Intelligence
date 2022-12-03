@@ -175,7 +175,7 @@ def evaluate(nim: Nim, n_matches=20, *, my_action, opponent_action=random_action
     while not sum(nim_tmp._rows) == 0:
       player = 1 - player
       ply = player_action[player](nim_tmp)
-      logging.debug(f'Action P{player} = {ply}')
+      #logging.debug(f'Action P{player} = {ply}')
       nim_tmp.nimming(ply)
       logging.debug(f'player {player} -> {nim_tmp}\tnim_sum = {nim_sum(nim_tmp._rows)}')
 
@@ -184,5 +184,4 @@ def evaluate(nim: Nim, n_matches=20, *, my_action, opponent_action=random_action
       won += 1
       
   return won/n_matches
-
 
