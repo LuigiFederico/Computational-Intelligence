@@ -28,4 +28,7 @@ class Nim:
         assert self._k is None or num_objects <= self._k
         self._rows[row] -= num_objects
 
+    def is_game_over(self):
+        # This method is made by me
+        return sum(self._rows) == 0
 
