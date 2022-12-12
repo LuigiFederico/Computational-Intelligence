@@ -34,6 +34,11 @@ __The documentation is inside every function. The readme gives just the high lev
 
 ---
 
+### Collaborations:  
+- Paolo Drago Leon
+
+--- 
+
 ## Task 3.1 - An agent using fixed rules based on nim-sum  
 
 The agent uses an expert strategy based on nim-sum. If the agent is on a position with not zero nim-sum, then he will always win.  
